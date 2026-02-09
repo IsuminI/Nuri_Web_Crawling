@@ -124,6 +124,8 @@ python -m playwright install
 python app.py
 ```
 
+UI 사진
+![UI_사진](./image/UI.png)
 UI에서:
 - **출력 파일명**: `list_YYYYMMDD` / `list_YYYYMMDD_상세` 기본값 제공, 원하는 이름으로 변경 가능
 - **추출 건수**: 1~100 범위 내에서 목록/상세 수집 건수 지정
@@ -138,6 +140,15 @@ python -m src.cli --headed --slowmo-ms 0 --max-pages 2 --max-items 20
 
 # interval 모드: 60분 간격으로 반복 실행
 python -m src.cli --mode interval --interval-min 60 --max-items 50
+
+# 목록만 10건만 빠르게 확인 (상세 생략, headless)
+python -m src.cli --headless --max-pages 1 --max-items 10 --list-only
+
+# 특정 키워드가 포함된 공고만 수집
+python -m src.cli --headless --max-pages 2 --max-items 30 --keyword "재개발" --keyword "설계"
+
+# 디버깅용으로 브라우저를 띄우고 천천히 진행
+python -m src.cli --headed --slowmo-ms 500 --max-pages 1 --max-items 5
 ```
 
 주요 옵션:
@@ -262,7 +273,7 @@ python -m src.cli --headed --slowmo-ms 0 --max-pages 3 --max-items 25
 #### 개선 아이디어
 
 - 크롤링 대상/필터를 UI/CLI에서 더 유연하게 설정 (키워드, 기관, 공사/용역/물품 등)
-- 누리장터 검색 조건과 연동해 **검색 기간(최근 N개월, 시작/종료일 직접 입력 등)**을 설정할 수 있는 날짜 필터 추가
+- 누리장터 검색 조건과 연동해 **검색 기간(최근 N개월, 시작/종료일 직접 입력 등)**  을 설정할 수 있는 날짜 필터 추가
 - 실패한 공고에 대한 **재시도 정책(백오프, N회 재시도 후 포기)** 추가
 - 크롤링 결과를 기반으로 한 간단한 통계/리포트(일일 공고 수, 기관별 분포 등) 생성
 - 도커 이미지/배포 스크립트 추가로 운영 환경 배포 자동화
