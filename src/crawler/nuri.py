@@ -138,7 +138,6 @@ async def navigate_to_bid_list(page: Page, cfg: CrawlConfig) -> None:
         if cfg.search_button_selector:
             try:
                 await page.locator(cfg.search_button_selector).first.click(timeout=8000)
-                print("search_button_selector clicked")
             except Exception:
                 if cfg.search_button_text:
                     await _click_by_text(page, cfg.search_button_text, timeout_ms=8000)
