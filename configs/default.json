@@ -1,0 +1,154 @@
+{
+  "base_url": "https://nuri.g2b.go.kr/",
+  "navigation": {
+    "mega_menu": {
+      "hover_text": "입찰공고",
+      "click_text": "입찰공고목록",
+      "depth1_selector": "a.depth1",
+      "depth3_selector": "a.depth3"
+    },
+    "search_button_text": "검색",
+    "search_button_selector": "div.btn_shbox input[value=\"검색\"]",
+    "bid_list_ready_selectors": [
+      "[id*='grdBidPbancList_body_tbody'] tr.grid_body_row",
+      "tr.grid_body_row",
+      "[id*='grdBidPbancList'] tbody tr",
+      "tbody tr",
+      "[role='row']"
+    ]
+  },
+  "list": {
+    "columns": [
+      "No",
+      "입찰공고번호",
+      "입찰공고명",
+      "공고구분",
+      "공고분류",
+      "입찰방식",
+      "진행상태",
+      "공고종류",
+      "계약방법",
+      "낙찰방법",
+      "기관명",
+      "공고게시일시",
+      "입찰마감일시"
+    ],
+    "row_selector_candidates": [
+      "[id*='grdBidPbancList_body_tbody'] tr.grid_body_row",
+      "tr.grid_body_row",
+      "[id*='grdBidPbancList'] tbody tr",
+      "tbody tr",
+      "table tbody tr",
+      "[role='row']"
+    ],
+    "link_selector_candidates": [
+      "a",
+      "[role='link']"
+    ],
+    "next_button_name_candidates": [
+      "다음",
+      "다음페이지",
+      ">",
+      "›"
+    ],
+    "next_button_selector_candidates": [
+      "li.w2pageList_control_next:not(.w2pageList_control_pageNext) a",
+      "li[id$='pagelist_next_btn'] a",
+      "#mf_wfm_container_pagelist_next_btn a"
+    ]
+  },
+  "detail": {
+    "ready_selectors": [
+      "body",
+      "table th",
+      "th"
+    ],
+    "sections": [
+      "공고일반",
+      "용역상세내역",
+      "입찰담당정보",
+      "입찰금액",
+      "기준금액",
+      "적격심사",
+      "재입찰내역",
+      "투찰제한",
+      "투찰제한-일반",
+      "현장설명회"
+    ],
+    "table_sections": [
+      "용역상세내역",
+      "재입찰내역"
+    ],
+    "field_sections": {
+      "공고일반": [
+        "입찰공고번호",
+        "문서번호",
+        "긴급입찰여부",
+        "공고종류",
+        "공고처리구분",
+        "업무분류",
+        "입찰공고명",
+        "입찰방식",
+        "계약방법",
+        "낙찰방법",
+        "재입찰여부",
+        "입찰서접수시작일시",
+        "입찰서접수마감일시",
+        "개찰일시",
+        "입찰보증서접수마감일시",
+        "입찰참가자격등록마감일시",
+        "개찰장소",
+        "개찰및낙찰-비고"
+      ],
+      "입찰담당정보": [
+        "담당부서",
+        "담당자"
+      ],
+      "입찰금액": [
+        "부가가치세포함여부",
+        "배정예산"
+      ],
+      "기준금액": [
+        "기준금액사용여부",
+        "기준금액공개여부",
+        "기준금액"
+      ],
+      "적격심사": [
+        "적격심사대상여부",
+        "적격심사표"
+      ],
+      "투찰제한": [
+        "지역제한",
+        "지사/지점허용여부",
+        "업종제한"
+      ],
+      "투찰제한-일반": [
+        "지역제한",
+        "참가가능지역",
+        "업종제한"
+      ],
+      "현장설명회": [
+        "현장설명회대상여부",
+        "현장설명회일시",
+        "현장설명회장소"
+      ]
+    },
+    "table_columns": {
+      "용역상세내역": [
+        "No",
+        "용역명",
+        "완수기한",
+        "용역현장명"
+      ],
+      "재입찰내역": [
+        "재입찰번호",
+        "공고명",
+        "개찰일시",
+        "진행현황"
+      ]
+    }
+  },
+  "filters": {
+    "keywords": []
+  }
+}

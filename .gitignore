@@ -1,0 +1,30 @@
+# Python 가상환경 / 캐시
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE / 에디터 설정
+.idea/
+.vscode/
+
+# OS / 기타 잡파일
+.DS_Store
+Thumbs.db
+
+# 실행 결과 데이터 (재현 시 다시 생성 가능)
+data/raw/
+data/normalized/
+data/errors/
+
+# 상태 DB (재시작용, 로컬에서 생성)
+state/
+
+# Node.js 의존성 (package.json / package-lock.json만 커밋)
+node_modules/
+
+# 로그 / 임시 파일
+*.log
+tmp/
+

@@ -1,0 +1,21 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any, Dict, Iterable, Optional
+
+
+class JsonlWriter:
+    def __init__(self, path: Path):
+        self.path = path
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+
+    def write_one(self, obj: Dict[str, Any]) -> None:
+        with self.path.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+
+    def write_many(self, objs: Iterable[Dict[str, Any]]) -> None:
+        with self.path.open("a", encoding="utf-8") as f:
+            for obj in objs:
+                f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+
