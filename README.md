@@ -124,8 +124,10 @@ python -m playwright install
 python app.py
 ```
 
-UI 사진
+UI 사진예시
+
 ![UI_사진](./image/UI.png)
+
 UI에서:
 - **출력 파일명**: `list_YYYYMMDD` / `list_YYYYMMDD_상세` 기본값 제공, 원하는 이름으로 변경 가능
 - **추출 건수**: 1~100 범위 내에서 목록/상세 수집 건수 지정
